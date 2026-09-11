@@ -1,0 +1,145 @@
+:root {
+    --background_color: #f4f4f4;
+    --surface_color: #ffffff;
+    --text_color: #222222;
+    --muted_color: #666666;
+    --primary_color: #1f2937;
+    --accent_color: #2563eb;
+    --border_color: #dddddd;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --radius: 12px;
+}
+
+body {
+    background-color: var(--background_color);
+    color: var(--text_color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body.dark_mode {
+    --background_color: #111827;
+    --surface_color: #1f2937;
+    --text_color: #f3f4f6;
+    --muted_color: #d1d5db;
+    --primary_color: #0f172a;
+    --accent_color: #60a5fa;
+    --border_color: #374151;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+header {
+    background-color: var(--primary_color);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+section {
+    background-color: var(--surface_color);
+    margin: 25px auto;
+    padding: 25px;
+    max-width: 1000px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+h2 {
+    border-bottom: 2px solid var(--accent_color);
+    padding-bottom: 10px;
+}
+
+.datos-personales {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+.experiencia-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.experiencia-grid article {
+    background-color: var(--surface_color);
+    padding: 20px;
+    border: 1px solid var(--border_color);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid var(--border_color);
+    text-align: left;
+}
+
+.habilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.habilidad {
+    background-color: var(--surface_color);
+    padding: 20px;
+    border: 1px solid var(--border_color);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+
+    .datos-personales {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .habilidades-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experiencia-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        margin: 15px;
+        padding: 15px;
+    }
+}
